@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library System</title>
+</head>
+<body>
+    <h2>Library System</h2>
+    <form method="POST">
+        {{ form.csrf_token }}
+        {{ form.student_name.label }} {{ form.student_name(size=20) }} <br>
+        {{ form.book_name.label }} {{ form.book_name(size=20) }} <br>
+        {{ form.category.label }} {{ form.category() }} <br>
+        {{ form.submit() }}
+    </form>
+    <a href="/return">Return</a> | <a href="/donate">Donate</a> | <a href="/books">All Books</a> | <a href="/track">Issued</a>
+</body>
+</html>

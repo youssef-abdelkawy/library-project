@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Books</title></head>
+<body>
+    <h2>Book List</h2>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.name }} ({{ book.category }}) {% if not book.available %} - Borrowed {% endif %}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back</a>
+</body>
+</html>
