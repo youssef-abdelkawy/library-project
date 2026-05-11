@@ -63,3 +63,6 @@ def list_books():
 def track():
     transactions = Transaction.query.all()
     return render_template("dashboard.html", books=[t.book for t in transactions])
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
